@@ -1,0 +1,22 @@
+.assistance {
+    padding: 20px;
+    text-align: center;
+}
+
+.assistance ul {
+    list-style: none;
+    padding: 0;
+}
+
+.assistance ul li {
+    margin: 10px 0;
+}
+
+.assistance ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.assistance ul li a:hover {
+    text-decoration: underline;
+}

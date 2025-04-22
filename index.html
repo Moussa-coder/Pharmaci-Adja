@@ -1,84 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharmacie Adja</title>
     <link rel="stylesheet" href="./Css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="./assistance.html">
+    <link rel="stylesheet" href="./rendez-vous.html">
 </head>
 <body>
-    <!-- En Tête -->
+    <!-- En-tête -->
     <header class="header">
         <a href="#" class="logo">
-            <img src="./Assets/Logo pharmacie.jpg" alt="Logo">
+            <img src="./Assets/Logo pharmacie.jpg" alt="Logo Pharmacie Adja">
         </a>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <!-- Barre de navigation -->
-         <nav class="navbar">
-            <a href="About">Home</a>
-            <a href="#login">Connexion</a>
+        <nav class="navbar">
+            <a href="#home">Accueil</a>
             <a href="#docteur">Docteur</a>
-            <a href="#medicament">Médicament</a>
-            <a href="#service">Service</a>
+            <a href="#medicament">Médicaments</a>
+            <a href="#service">Services</a>
+            <a href="#login">Connexion</a>
             <a href="#contact">Contact</a>
-         </nav>
-
+        </nav>
         <div class="monbtn">
-            <button>Assistance</button>
+            <a href="assistance.html">
+                <button class="btn-assistance">Assistance</button>
+            </a>        
         </div>
     </header>
-    <section class="main">
+
+    <!-- Section principale -->
+    <section class="main" id="home">
         <div class="left">
-            <h2>
-                Bienvenue à la Pharmacie Adja, votre destination de confiance pour tous vos besoins en santé et bien-être.
-            </h2>
-            <h3>
-                Nous sommes le meilleur des pharmacies en lignes.
-            </h3>
-            <p>
-                Nous somme disponible 24h/24 et 7j/7 pour vous servir.
-            </p>
-            <button>Prendre un rendez-vous</button>
-        </div>
+            <h2>Bienvenue à la Pharmacie Adja</h2>
+            <h3>Votre partenaire santé de confiance</h3>
+            <p>Disponible 24h/24 et 7j/7 pour tous vos besoins en santé et bien-être.</p>
+            <button class="btn-rdv" onclick="window.location.href='rendezvous.html'">Prendre un rendez-vous</button>        </div>
         <div class="right">
             <img src="./Assets/image1.jpg" alt="Pharmacie Adja">
         </div>
     </section>
+
+    <!-- Section À propos -->
     <section class="about" id="about">
         <h1>À propos de nous</h1>
-        <p>
-            La Pharmacie Adja est dédiée à fournir des soins de santé de qualité supérieure. 
-        </p>
-        <p>
-            Nous offrons une large gamme de médicaments, de conseils de santé et de services personnalisés pour répondre à vos besoins uniques.
-        </p>
-        <p>
-            Notre mission est de vous aider à vivre une vie plus saine et plus heureuse.
-        </p>
-        <p>
-            Nous croyons en l'importance de la santé et du bien-être, et nous nous engageons à vous fournir les meilleurs produits et services disponibles.
-        </p>
-        <p>
-            Que vous ayez besoin de médicaments sur ordonnance, de conseils de santé ou d'informations sur les produits, notre équipe est là pour vous aider.
-        </p>
-        </section>
-        <!-- Connexion -->
-        <section class="connexion" id="Se connecter">
-            <h2>Connexion</h2>
-            <form action="">
-                <label for="name">Nom complet : </label>
-                <input type="text" id="name" name="name" required>
-                <br>
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label for="password">Mot de passe :</label>
-                <input type="password" id="password" name="password" required>
-                <br>
-                <button type="submit">Se connecter</button>
-            </form>
+        <div class="about-content">
+            <p>La Pharmacie Adja est dédiée à fournir des soins de santé de qualité supérieure.</p>
+            <p>Nous offrons une large gamme de médicaments, de conseils de santé et de services personnalisés pour répondre à vos besoins uniques.</p>
+            <p>Notre mission est de vous aider à vivre une vie plus saine et plus heureuse.</p>
+            <p>Nous croyons en l'importance de la santé et du bien-être, et nous nous engageons à vous fournir les meilleurs produits et services disponibles.</p>
+            <p>Que vous ayez besoin de médicaments sur ordonnance, de conseils de santé ou d'informations sur les produits, notre équipe est là pour vous aider.</p>
+        </div>
+    </section>
+        <!-- Section Docteur -->
+        <section class="docteur" id="docteur">
+            <h1>Nos Docteurs</h1>
+            <div class="docteur-grid">
+                <div class="docteur-card">
+                    <img src="./Assets/docteur1.jpg" alt="Docteur 1">
+                        <h3>Dr. Awa Diop</h3>
+                <p>Spécialiste en médecine générale</p>
+            <button class="btn-consult">Prendre rendez-vous</button>
+        </div>
+        <div class="docteur-card">
+            <img src="./Assets/docteur2.jpg" alt="Docteur 2">
+            <h3>Dr. Mamadou Sow</h3>
+            <p>Pharmacien consultant</p>
+            <button class="btn-consult">Prendre rendez-vous</button>
+        </div>
+        <div class="docteur-card">
+            <img src="./Assets/docteur3.jpg" alt="Docteur 3">
+            <h3>Dr. Fatou Ndiaye</h3>
+            <p>Spécialiste en santé publique</p>
+            <button class="btn-consult">Prendre rendez-vous</button>
+        </div>
+    </div>
+</section>
 
-        </section>
+         <!-- Section Médicaments -->
+    <section class="medicament" id="medicament">
+        <h1>Nos Médicaments</h1>
+        <div class="medicament-grid">
+            <div class="medicament-card">
+                <img src="./Assets/medicament1.jpg" alt="Médicament 1">
+                <h3>Paracétamol</h3>
+                <p>Antidouleur et antipyrétique</p>
+                <p class="price">500 FCFA</p>
+                <button class="btn-buy">Ajouter au panier</button>
+            </div>
+            <div class="medicament-card">
+                <img src="./Assets/medicament2.jpg" alt="Médicament 2">
+                <h3>Amoxicilline</h3>
+                <p>Antibiotique à large spectre</p>
+                <p class="price">2000 FCFA</p>
+                <button class="btn-buy">Ajouter au panier</button>
+            </div>
+            <div class="medicament-card">
+                <img src="./Assets/medicament3.jpg" alt="Médicament 3">
+                <h3>Vitamine C</h3>
+                <p>Complément alimentaire</p>
+                <p class="price">1000 FCFA</p>
+                <button class="btn-buy">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section class="service" id="service">
+        <h1>Nos Services</h1>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Consultation en ligne</h3>
+                <p>Consultez nos docteurs depuis chez vous via vidéoconférence.</p>
+            </div>
+            <div class="service-card">
+                <h3>Livraison à domicile</h3>
+                <p>Recevez vos médicaments directement à votre porte.</p>
+            </div>
+            <div class="service-card">
+                <h3>Conseils personnalisés</h3>
+                <p>Bénéficiez de conseils de santé adaptés à vos besoins.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Connexion -->
+    <section class="login" id="login">
+        <h1>Connexion</h1>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Entrez votre email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+            </div>
+            <button type="submit" class="btn-login">Se connecter</button>
+            <p class="register-link">Pas de compte ? <a href="#register">Inscrivez-vous</a></p>
+        </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <p>Email: contact@pharmacieadja.com</p>
+                <p>Téléphone: +221 77 123 45 67</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <a href="#medicament">Médicaments</a>
+                <a href="#service">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>24h/24, 7j/7</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 Pharmacie Adja. Tous droits réservés.</p>
+    </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

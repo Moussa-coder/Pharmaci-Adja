@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+.header {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #2ecc71;
+}
+/* Styles pour le bouton hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+/* Navigation par défaut */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+/* Navigation responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+.monbtn .btn-assistance {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.monbtn .btn-assistance:hover {
+    background: #27ae60;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 5%;
+    background: linear-gradient(to right, #f0f9f4, #ffffff);
+}
+
+.main .left {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.main .left h2 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+.main .left h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.main .left p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.main .btn-rdv {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.main .btn-rdv:hover {
+    background: #27ae60;
+}
+
+.main .right {
+    flex: 1;
+}
+
+.main .right img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.about {
+    padding: 5rem 5%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    color: #666;
+}
+
+/* Section Docteur */
+.docteur {
+    padding: 5rem 5%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.docteur h1 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 2rem;
+}
+
+.docteur-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.docteur-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.docteur-card:hover {
+    transform: translateY(-5px);
+}
+
+.docteur-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.docteur-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.docteur-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.btn-consult {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-consult:hover {
+    background: #27ae60;
+}
+
+/* Section Médicaments */
+.medicament {
+    padding: 5rem 5%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.medicament h1 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 2rem;
+}
+
+.medicament-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.medicament-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.medicament-card:hover {
+    transform: translateY(-5px);
+}
+
+.medicament-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.medicament-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.medicament-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.medicament-card .price {
+    font-weight: 600;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+.btn-buy {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover {
+    background: #27ae60;
+}
+
+/* Section Services */
+.service {
+    padding: 5rem 5%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.service h1 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 2rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #666;
+}
+
+/* Section Connexion */
+.login {
+    padding: 5rem 5%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.login h1 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-login {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background: #27ae60;
+}
+
+.register-link {
+    margin-top: 1rem;
+    text-align: center;
+    color: #666;
+}
+
+.register-link a {
+    color: #2ecc71;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background: #2ecc71;
+    color: white;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section p, .footer-section a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .main {
+        flex-direction: column;
+        padding: 120px 5% 2rem;
+    }
+    
+    .main .left {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .main .right img {
+        max-width: 300px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
