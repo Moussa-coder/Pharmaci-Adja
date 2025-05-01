@@ -1,6 +1,47 @@
-.assistance {
+/* Global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* En-tête */
+.header {
+    background-color: #d1f0f0;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+    height: 70px;
+    vertical-align: middle;
+}
+
+.header h1 {
+    margin-top: 10px;
+    color: #007777;
+}
+
+/* Section Assistance */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.assistance h2 {
+    color: #007777;
+}
+
+.assistance p {
+    margin-bottom: 15px;
 }
 
 .assistance ul {
@@ -14,9 +55,35 @@
 
 .assistance ul li a {
     text-decoration: none;
-    color: #007BFF;
+    color: #006666;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .assistance ul li a:hover {
-    text-decoration: underline;
+    color: #003f3f;
+}
+
+/* FAQ & Contact */
+section#faq, section#contact {
+    margin-top: 40px;
+}
+
+h3 {
+    color: #004d4d;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    margin: 5px 0;
+}
+
+/* Pied de page */
+.footer {
+    background-color: #d1f0f0;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #333;
 }

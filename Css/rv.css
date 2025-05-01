@@ -1,37 +1,95 @@
-.rendezvous {
-    padding: 20px;
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f8fa;
+    color: #333;
+}
+
+h1, h2 {
     text-align: center;
+    color: #2ecc71;
 }
 
+/* En-tête */
+.header {
+    background-color: #f4f7f5;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header .logo img {
+    height: 80px;
+    vertical-align: middle;
+}
+
+/* Section principale */
+main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.rendezvous h2 {
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
 .rendezvous-form {
-    max-width: 500px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
-.rendezvous-form .form-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.rendezvous-form input,
-.rendezvous-form textarea,
-.rendezvous-form button {
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
     padding: 10px;
-    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
-.rendezvous-form button {
-    background-color: #007BFF;
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-submit {
+    background-color: #2ecc71;
     color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.rendezvous-form button:hover {
-    background-color: #0056b3;
+.btn-submit:hover {
+    background-color: #2ecc71;
+}
+
+/* Pied de page */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e0f7fa;
+    color: #333;
+    margin-top: 40px;
+    font-size: 0.9rem;
 }
