@@ -353,6 +353,16 @@ body {
     color: #666;
 }
 
+.service-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;          /* Hauteur fixe */
+    object-fit: cover;      /* L'image se centre et remplit sans se déformer */
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+
 /* Section Connexion */
 .login {
     padding: 5rem 5%;
